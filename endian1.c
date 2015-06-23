@@ -19,11 +19,12 @@ int main()
         printf("this is Little Endian\n");
     }
 
-	// 内存从低到高分别打印四个字节的内容
-	printf("%p: 0x%x\n", &n0, n0);
-	printf("%p: 0x%x\n", &n1, n1);
-	printf("%p: 0x%x\n", &n2, n2);
-	printf("%p: 0x%x\n", &n3, n3);
+    // 内存从低到高分别打印四个字节的内容
+    printf("%p: 0x%x\n", &((char *) &num)[0], n0);
+    printf("%p: 0x%x\n", &((char *) &num)[1], n1);
+    printf("%p: 0x%x\n", &((char *) &num)[2], n2);
+    printf("%p: 0x%x\n", &((char *) &num)[3], n3);
+
     return 0;
 }
 
